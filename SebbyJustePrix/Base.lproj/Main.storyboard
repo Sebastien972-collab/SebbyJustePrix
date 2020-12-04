@@ -1,24 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SebbyJustePrix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Juste Prix" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAJ-qh-psZ">
+                                <rect key="frame" x="70" y="73" width="275" height="234"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aiu-In-c8E">
+                                <rect key="frame" x="99" y="330" width="205" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kz2-FD-Fs1">
+                                <rect key="frame" x="70" y="413" width="275" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="Validez">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="uValidatePrice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q3v-BK-oJ5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.36022168399999999" green="0.55637288090000003" blue="0.78482031819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.36022168399999999" green="0.55637288090000003" blue="0.78482031819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rAJ-qh-psZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="5kH-CR-gxt"/>
+                            <constraint firstItem="kz2-FD-Fs1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7Fp-5U-d8o"/>
+                            <constraint firstItem="Aiu-In-c8E" firstAttribute="top" secondItem="rAJ-qh-psZ" secondAttribute="bottom" constant="23" id="AMW-SM-G7z"/>
+                            <constraint firstItem="kz2-FD-Fs1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="BBa-Ej-kYf"/>
+                            <constraint firstItem="rAJ-qh-psZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="HwN-vc-b4L"/>
+                            <constraint firstItem="Aiu-In-c8E" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="330" id="T4H-1M-CMc"/>
+                            <constraint firstItem="Aiu-In-c8E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="Tfj-Uo-UJP"/>
+                            <constraint firstItem="kz2-FD-Fs1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="crq-oL-pNb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kz2-FD-Fs1" secondAttribute="trailing" constant="69" id="ctu-j7-0oD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aiu-In-c8E" secondAttribute="trailing" constant="110" id="gLv-ax-EmE"/>
+                            <constraint firstItem="kz2-FD-Fs1" firstAttribute="top" secondItem="Aiu-In-c8E" secondAttribute="bottom" constant="49" id="j1g-t4-crG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rAJ-qh-psZ" secondAttribute="trailing" constant="69" id="rJq-GW-sT7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kz2-FD-Fs1" secondAttribute="trailing" constant="69" id="zOI-U7-McI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayPrice" destination="rAJ-qh-psZ" id="pvE-Xd-Go7"/>
+                        <outlet property="uPrice" destination="Aiu-In-c8E" id="dcw-a8-v5C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="62.946428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
