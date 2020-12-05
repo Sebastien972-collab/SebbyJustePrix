@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var uName = ""
+    var score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +20,7 @@ class ViewController: UIViewController {
     func justePrix(priceChoice : Int) -> Bool {
         print("ok")
         if priceChoice > price {
-            displayPrice.text = "C'est moins"
+            displayPrice.text = "C'est moins \(uName)"
             return false
         }
         else if priceChoice < price {
@@ -36,7 +38,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var uPrice: UITextField!
     
     @IBAction func congratButton(_ sender: Any) {
-        print("Apuuie Second")
+        print("Apuie Second")
         
     }
     
@@ -46,12 +48,21 @@ class ViewController: UIViewController {
         let priceUser = Int(uPrice.text ?? "") ?? 0
         justePrix(priceChoice: priceUser)
         uPrice.text = ""
+        score += 1
         if justePrix(priceChoice: priceUser) == true {
+            print("trop tot")
             uPrice.resignFirstResponder()
-            self.performSegue(withIdentifier: "SecondViewsSegue", sender: self)
+            performSegue(withIdentifier: "congratVictory", sender: nil)
         }
     }
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "congratVictory"{
+            let VCDestination = segue.destination as! CongratViewController
+            VCDestination.uName = uName
+            VCDestination.uScore = score
+            
+        }
+    }
     
         
     
