@@ -15,16 +15,19 @@ class ViewController: UIViewController {
     
     let price = Int.random(in: 0...500)
     
-    func justePrix(priceChoice : Int) {
+    func justePrix(priceChoice : Int) -> Bool {
         print("ok")
         if priceChoice > price {
             displayPrice.text = "C'est moins"
+            return false
         }
         else if priceChoice < price {
             displayPrice.text = "C'est plus"
+            return false
         }
         else {
             displayPrice.text = "Vous avez gagner"
+            return true
         }
     }
     
@@ -32,19 +35,24 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var uPrice: UITextField!
     
+    @IBAction func congratButton(_ sender: Any) {
+        print("Apuuie Second")
+        
+    }
+    
     @IBAction func uValidatePrice(_ sender: Any) {
+        
         print(price)
         let priceUser = Int(uPrice.text ?? "") ?? 0
         justePrix(priceChoice: priceUser)
         uPrice.text = ""
-    }
-    /*  if let uText =  Int(priceUser.text!){
-        justePrix(let: uText)
-        }else{
-            print("Ca ne fonctionne pas ma chabine")
+        if justePrix(priceChoice: priceUser) == true {
+            uPrice.resignFirstResponder()
+            self.performSegue(withIdentifier: "SecondViewsSegue", sender: self)
         }
-        */
-       
+    }
+   
+    
         
     
 }
