@@ -53,6 +53,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Menu du Jeu" id="kHt-Qt-IGy"/>
                     <connections>
+                        <outlet property="launchGameCustom" destination="Eey-4Z-cyK" id="ky5-es-xo7"/>
                         <outlet property="userName" destination="NwN-ed-WaA" id="qI9-Pc-Ryk"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showGame" id="S2t-xr-MiK"/>
                     </connections>

@@ -8,14 +8,20 @@
 import UIKit
 import CoreData
 
-class MenuViewControlerViewController: UIViewController {
+class MenuViewControlerViewController: UIViewController, UITextFieldDelegate {
    
+    @IBOutlet weak var launchGameCustom: UIButton!
+    
     @IBOutlet weak var userName: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        launchGameCustom.applyDesign()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     @IBAction func launchGame(_ sender: UIButton) {
+        sender.pulsate()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -28,7 +34,6 @@ class MenuViewControlerViewController: UIViewController {
         } catch  {
             print("Erreur : impossible de sauvegarder mon context")
         }
-        
         performSegue(withIdentifier: "showGame", sender: nil)
     }
     

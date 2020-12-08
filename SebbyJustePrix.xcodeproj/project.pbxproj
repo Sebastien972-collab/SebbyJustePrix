@@ -16,6 +16,7 @@
 		8B8FF47D257BC0A00056BB78 /* MenuViewControlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8FF47C257BC0A00056BB78 /* MenuViewControlerViewController.swift */; };
 		8B8FF480257BD1F40056BB78 /* CongratViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8FF47F257BD1F40056BB78 /* CongratViewController.swift */; };
 		8B8FF4B3257CF6550056BB78 /* Core.data_Sebby.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B8FF4B1257CF6550056BB78 /* Core.data_Sebby.xcdatamodeld */; };
+		8BEBB71F257FDC48008F3C1B /* UIButtonextension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEBB71E257FDC48008F3C1B /* UIButtonextension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8B8FF47F257BD1F40056BB78 /* CongratViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratViewController.swift; sourceTree = "<group>"; };
 		8B8FF486257CF26A0056BB78 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		8B8FF4B2257CF6550056BB78 /* Core.data_Sebby.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Core.data_Sebby.xcdatamodel; sourceTree = "<group>"; };
+		8BEBB71E257FDC48008F3C1B /* UIButtonextension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonextension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				8B8FF47F257BD1F40056BB78 /* CongratViewController.swift */,
 				8B8FF4462576F69B0056BB78 /* Main.storyboard */,
 				8B8FF47C257BC0A00056BB78 /* MenuViewControlerViewController.swift */,
+				8BEBB71E257FDC48008F3C1B /* UIButtonextension.swift */,
 				8B8FF4492576F6A40056BB78 /* Assets.xcassets */,
 				8B8FF44B2576F6A40056BB78 /* LaunchScreen.storyboard */,
 				8B8FF44E2576F6A40056BB78 /* Info.plist */,
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BEBB71F257FDC48008F3C1B /* UIButtonextension.swift in Sources */,
 				8B8FF4452576F69B0056BB78 /* ViewController.swift in Sources */,
 				8B8FF4412576F69B0056BB78 /* AppDelegate.swift in Sources */,
 				8B8FF4432576F69B0056BB78 /* SceneDelegate.swift in Sources */,

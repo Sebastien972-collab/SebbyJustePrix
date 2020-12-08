@@ -30,7 +30,7 @@ class CongratViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "bacToMenu" {
-            let VCDestination = segue.destination as! ViewController
+            _ = segue.destination as! ViewController
             
         }
     }
