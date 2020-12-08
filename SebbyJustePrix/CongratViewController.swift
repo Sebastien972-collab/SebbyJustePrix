@@ -12,10 +12,14 @@ class CongratViewController: UIViewController {
     var uName = ""
     var uScore = 0
     @IBOutlet weak var congatMessage: UILabel!
-
+    @IBOutlet weak var bacToMenuCustom: UIButton!
+    @IBOutlet weak var infoButtonCustom: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         congatMessage.text = "Felicitation \(uName) votre score est \(uScore)"
+        bacToMenuCustom.applyDesign()
+        infoButtonCustom.applyDesign()
     }
     @IBAction func backToMenuButton(_ sender: Any) {
         performSegue(withIdentifier: "backToMenu", sender: nil)

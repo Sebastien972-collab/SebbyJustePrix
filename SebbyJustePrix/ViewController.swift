@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        validateCustom.applyDesign()
     }
     
     let price = Int.random(in: 0...500)
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var displayPrice: UILabel!
     
+    @IBOutlet weak var validateCustom: UIButton!
     @IBOutlet weak var uPrice: UITextField!
     
     @IBAction func congratButton(_ sender: Any) {

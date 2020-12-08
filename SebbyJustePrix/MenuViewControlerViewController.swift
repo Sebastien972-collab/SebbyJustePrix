@@ -21,7 +21,7 @@ class MenuViewControlerViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     @IBAction func launchGame(_ sender: UIButton) {
-        sender.pulsate()
+        launchGameCustom.pulsate()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
