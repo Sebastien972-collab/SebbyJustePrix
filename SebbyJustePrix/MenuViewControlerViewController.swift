@@ -15,7 +15,6 @@ class MenuViewControlerViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    
     @IBAction func launchGame(_ sender: UIButton) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext

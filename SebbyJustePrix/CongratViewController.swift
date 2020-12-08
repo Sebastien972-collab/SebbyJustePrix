@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class CongratViewController: UIViewController {
     var uName = ""
@@ -16,8 +17,24 @@ class CongratViewController: UIViewController {
         super.viewDidLoad()
         congatMessage.text = "Felicitation \(uName) votre score est \(uScore)"
     }
+    @IBAction func backToMenuButton(_ sender: Any) {
+        performSegue(withIdentifier: "backToMenu", sender: nil)
+    }
     
-
+    @IBAction func informationDevButton(_ sender: Any) {
+        
+        let SCV = SFSafariViewController(url: URL(string:"https://www.notion.so/CV-Se-bastienDAGUIN2021iW-77581e8535cb4c54b957510aa1a8c20c")!)
+        
+        present(SCV, animated: true)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "bacToMenu" {
+            let VCDestination = segue.destination as! ViewController
+            
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

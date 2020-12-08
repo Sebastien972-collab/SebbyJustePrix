@@ -32,7 +32,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eey-4Z-cyK">
                                 <rect key="frame" x="128" y="484" width="158" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Allez au jeu !" backgroundImage="App Store-2">
+                                <state key="normal" title="Allez au jeu !">
                                     <color key="titleColor" red="0.84705882349999995" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -64,7 +64,7 @@
         <!--Partie en cours-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SebbyJustePrix" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Partie en cours" id="BYZ-38-t0r" customClass="ViewController" customModule="SebbyJustePrix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="-174" y="27"/>
         </scene>
-        <!--SecondView-->
+        <!--Congratulation view-->
         <scene sceneID="pbo-UR-9Wi">
             <objects>
-                <viewController title="SecondView" id="J5A-Zu-dv8" customClass="CongratViewController" customModule="SebbyJustePrix" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Congratulation view" id="J5A-Zu-dv8" customClass="CongratViewController" customModule="SebbyJustePrix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hXe-es-srs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,16 +135,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjO-ae-q42">
-                                <rect key="frame" x="135" y="617" width="151" height="83"/>
+                                <rect key="frame" x="132" y="596" width="151" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQ0-cM-ncS">
-                                <rect key="frame" x="146" y="754" width="129" height="34"/>
+                                <rect key="frame" x="146" y="716" width="129" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Retour Au menu"/>
+                                <connections>
+                                    <action selector="backToMenuButton:" destination="J5A-Zu-dv8" eventType="touchUpInside" id="Ktg-T7-baB"/>
+                                    <segue destination="vea-Qs-5cb" kind="show" identifier="backToMenu" id="S1N-8f-Hbp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eto-xk-Dre">
+                                <rect key="frame" x="89" y="758" width="236" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Information sur le developpeur ">
+                                    <color key="titleColor" red="0.96078431369999995" green="0.95294117649999999" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="informationDevButton:" destination="J5A-Zu-dv8" eventType="touchUpInside" id="UW7-28-MhG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TRW-Dw-3Xu"/>
@@ -157,12 +171,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tWD-9Z-AhB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588" y="27"/>
+            <point key="canvasLocation" x="-578" y="745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ekf-K2-EtP">
             <objects>
                 <navigationController interfaceStyle="dark" id="vea-Qs-5cb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="X9B-z7-ZQE"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2dP-e7-g2g">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -180,7 +195,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="App Store-2" width="1024" height="1024"/>
         <image name="Congrat" width="368" height="490"/>
         <image name="icons8-information-100" width="100" height="100"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
