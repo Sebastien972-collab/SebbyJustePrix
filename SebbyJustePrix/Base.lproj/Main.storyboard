@@ -39,6 +39,14 @@
                                     <action selector="launchGame:" destination="UEP-bc-bJg" eventType="touchUpInside" id="l3F-wk-QPU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHx-1Q-uHG">
+                                <rect key="frame" x="310" y="775" width="60" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icons8-information-100"/>
+                                <connections>
+                                    <action selector="infoButton:" destination="UEP-bc-bJg" eventType="touchUpInside" id="WoY-86-emq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qbF-oq-wYA"/>
                         <color key="backgroundColor" red="0.36022168399999999" green="0.55637288090000003" blue="0.78482031819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -174,6 +182,7 @@
     <resources>
         <image name="App Store-2" width="1024" height="1024"/>
         <image name="Congrat" width="368" height="490"/>
+        <image name="icons8-information-100" width="100" height="100"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

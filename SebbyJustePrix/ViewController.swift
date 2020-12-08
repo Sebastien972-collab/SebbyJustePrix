@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     var uName = ""
@@ -43,6 +44,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func uValidatePrice(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context)
         
         print(price)
         let priceUser = Int(uPrice.text ?? "") ?? 0
@@ -50,6 +54,7 @@ class ViewController: UIViewController {
         uPrice.text = ""
         score += 1
         if justePrix(priceChoice: priceUser) == true {
+            newUser.setValue(score, forKey: "userScore")
             print("trop tot")
             uPrice.resignFirstResponder()
             performSegue(withIdentifier: "congratVictory", sender: nil)

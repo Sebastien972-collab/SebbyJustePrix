@@ -15,6 +15,7 @@
 		8B8FF44D2576F6A40056BB78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8FF44B2576F6A40056BB78 /* LaunchScreen.storyboard */; };
 		8B8FF47D257BC0A00056BB78 /* MenuViewControlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8FF47C257BC0A00056BB78 /* MenuViewControlerViewController.swift */; };
 		8B8FF480257BD1F40056BB78 /* CongratViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8FF47F257BD1F40056BB78 /* CongratViewController.swift */; };
+		8B8FF4B3257CF6550056BB78 /* Core.data_Sebby.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B8FF4B1257CF6550056BB78 /* Core.data_Sebby.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		8B8FF44E2576F6A40056BB78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B8FF47C257BC0A00056BB78 /* MenuViewControlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewControlerViewController.swift; sourceTree = "<group>"; };
 		8B8FF47F257BD1F40056BB78 /* CongratViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratViewController.swift; sourceTree = "<group>"; };
+		8B8FF486257CF26A0056BB78 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		8B8FF4B2257CF6550056BB78 /* Core.data_Sebby.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Core.data_Sebby.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +49,7 @@
 			children = (
 				8B8FF43F2576F69B0056BB78 /* SebbyJustePrix */,
 				8B8FF43E2576F69B0056BB78 /* Products */,
+				8B8FF485257CF26A0056BB78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,8 +73,17 @@
 				8B8FF4492576F6A40056BB78 /* Assets.xcassets */,
 				8B8FF44B2576F6A40056BB78 /* LaunchScreen.storyboard */,
 				8B8FF44E2576F6A40056BB78 /* Info.plist */,
+				8B8FF4B1257CF6550056BB78 /* Core.data_Sebby.xcdatamodeld */,
 			);
 			path = SebbyJustePrix;
+			sourceTree = "<group>";
+		};
+		8B8FF485257CF26A0056BB78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B8FF486257CF26A0056BB78 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +159,7 @@
 				8B8FF4452576F69B0056BB78 /* ViewController.swift in Sources */,
 				8B8FF4412576F69B0056BB78 /* AppDelegate.swift in Sources */,
 				8B8FF4432576F69B0056BB78 /* SceneDelegate.swift in Sources */,
+				8B8FF4B3257CF6550056BB78 /* Core.data_Sebby.xcdatamodeld in Sources */,
 				8B8FF47D257BC0A00056BB78 /* MenuViewControlerViewController.swift in Sources */,
 				8B8FF480257BD1F40056BB78 /* CongratViewController.swift in Sources */,
 			);
@@ -301,6 +315,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.daguin-sebastien.SebbyJustePrix";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -320,6 +335,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.daguin-sebastien.SebbyJustePrix";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -349,6 +365,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8B8FF4B1257CF6550056BB78 /* Core.data_Sebby.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8B8FF4B2257CF6550056BB78 /* Core.data_Sebby.xcdatamodel */,
+			);
+			currentVersion = 8B8FF4B2257CF6550056BB78 /* Core.data_Sebby.xcdatamodel */;
+			path = Core.data_Sebby.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8B8FF4352576F69B0056BB78 /* Project object */;
 }
