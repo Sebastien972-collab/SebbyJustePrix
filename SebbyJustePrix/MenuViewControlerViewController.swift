@@ -13,6 +13,7 @@ class MenuViewControlerViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var launchGameCustom: UIButton!
     
     @IBOutlet weak var userName: UITextField!
+    @IBAction func unwindToWelcome(segue:UIStoryboardSegue){}
     override func viewDidLoad() {
         super.viewDidLoad()
         launchGameCustom.applyDesign()

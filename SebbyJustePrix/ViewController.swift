@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     func justePrix(priceChoice : Int) -> Bool {
         print("ok")
         if priceChoice > price {
-            displayPrice.text = "C'est moins \(uName)"
+            displayPrice.text = "C'est moins"
             return false
         }
         else if priceChoice < price {
@@ -49,13 +49,15 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context)
+        var vict = false
         
+            
         print(price)
         let priceUser = Int(uPrice.text ?? "") ?? 0
-        justePrix(priceChoice: priceUser)
+        vict = justePrix(priceChoice: priceUser)
         uPrice.text = ""
         score += 1
-        if justePrix(priceChoice: priceUser) == true {
+        if vict == true {
             newUser.setValue(score, forKey: "userScore")
             print("trop tot")
             uPrice.resignFirstResponder()

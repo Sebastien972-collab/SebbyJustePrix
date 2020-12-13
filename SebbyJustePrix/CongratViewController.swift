@@ -22,7 +22,6 @@ class CongratViewController: UIViewController {
         infoButtonCustom.applyDesign()
     }
     @IBAction func backToMenuButton(_ sender: Any) {
-        performSegue(withIdentifier: "backToMenu", sender: nil)
     }
     
     @IBAction func informationDevButton(_ sender: Any) {
