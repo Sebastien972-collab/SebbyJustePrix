@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        validateCustom.applyDesign()
+       
     }
     
     let price = Int.random(in: 0...500)

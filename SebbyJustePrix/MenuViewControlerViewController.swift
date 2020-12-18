@@ -16,7 +16,7 @@ class MenuViewControlerViewController: UIViewController, UITextFieldDelegate {
     @IBAction func unwindToWelcome(segue:UIStoryboardSegue){}
     override func viewDidLoad() {
         super.viewDidLoad()
-        launchGameCustom.applyDesign()
+       
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
