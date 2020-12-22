@@ -11,9 +11,13 @@ import CoreData
 class MenuViewControlerViewController: UIViewController, UITextFieldDelegate {
    
     @IBOutlet weak var launchGameCustom: UIButton!
+    @IBOutlet weak var levelDifficult: UISegmentedControl!
     
     @IBOutlet weak var userName: UITextField!
     @IBAction func unwindToWelcome(segue:UIStoryboardSegue){}
+    var uGamer : Gamer!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -22,13 +26,11 @@ class MenuViewControlerViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     @IBAction func launchGame(_ sender: UIButton) {
+        createObject()
         launchGameCustom.pulsate()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
-        let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context)
-        newUser.setValue(userName.text, forKey: "userName")
-        newUser.setValue(0, forKey: "userScore")
         do {
             try context.save()
             print("Context save")
@@ -42,13 +44,18 @@ class MenuViewControlerViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showGame" {
             let VCDestination = segue.destination as! ViewController
-            VCDestination.uName = userName.text!
-            
+            VCDestination.uGamer = uGamer 
         }
+    }
+    private func createObject(){
+        let name  = userName.text 
+        let difficult = levelDifficult.selectedSegmentIndex
+        uGamer = Gamer(name: name,score: 0, difficult: difficult)
+        
     }
 
     @IBAction func infoButton(_ sender: Any) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+       /* let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         
@@ -70,6 +77,6 @@ class MenuViewControlerViewController: UIViewController, UITextFieldDelegate {
             
         } catch  {
             print("Error ")
-        }
+        }*/
     }
 }

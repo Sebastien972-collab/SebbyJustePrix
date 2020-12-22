@@ -7,21 +7,36 @@
 
 import UIKit
 import SafariServices
+import CoreData
 
 class CongratViewController: UIViewController {
-    var uName = ""
-    var uScore = 0
+    var uGamer : Gamer!
     @IBOutlet weak var congatMessage: UILabel!
     @IBOutlet weak var bacToMenuCustom: UIButton!
     @IBOutlet weak var infoButtonCustom: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        congatMessage.text = "Felicitation \(uName) votre score est \(uScore)"
+        let name = uGamer.name!
+        let score = uGamer.score
+        
+        
+        congatMessage.text = "Felicitation \(name) votre score est \(score)"
         bacToMenuCustom.applyDesign()
         infoButtonCustom.applyDesign()
+        
+
     }
     @IBAction func backToMenuButton(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context)
+        newUser.setValue(uGamer.name! , forKey: "userName")
+        newUser.setValue(uGamer.score, forKey: "userScore")
+        newUser.setValue(uGamer.difficult, forKey: "userDifficult")
+        
+        
+        
     }
     
     @IBAction func informationDevButton(_ sender: Any) {
@@ -37,6 +52,12 @@ class CongratViewController: UIViewController {
             
         }
     }
+     
+    
+    
+    
+    
+    
     
     /*
     // MARK: - Navigation
