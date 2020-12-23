@@ -55,7 +55,7 @@ class MenuViewControlerViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func infoButton(_ sender: Any) {
-       /* let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         
@@ -77,6 +77,6 @@ class MenuViewControlerViewController: UIViewController, UITextFieldDelegate {
             
         } catch  {
             print("Error ")
-        }*/
+        }
     }
 }

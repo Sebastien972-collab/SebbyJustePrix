@@ -18,25 +18,25 @@ class CongratViewController: UIViewController {
         super.viewDidLoad()
         let name = uGamer.name!
         let score = uGamer.score
+        print( "Voici le score retenue :  \(score)")
         
         
         congatMessage.text = "Felicitation \(name) votre score est \(score)"
         bacToMenuCustom.applyDesign()
         infoButtonCustom.applyDesign()
-        
-
-    }
-    @IBAction func backToMenuButton(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context)
         newUser.setValue(uGamer.name! , forKey: "userName")
-        newUser.setValue(uGamer.score, forKey: "userScore")
+        newUser.setValue(score, forKey: "userScore")
         newUser.setValue(uGamer.difficult, forKey: "userDifficult")
         
         
-        
+
+    }
+    @IBAction func backToMenuButton(_ sender: Any) {
+        print(uGamer.score)
     }
     
     @IBAction func informationDevButton(_ sender: Any) {
